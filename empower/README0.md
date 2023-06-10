@@ -45,6 +45,10 @@ echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> ~/.bash_profile
 source ~/.bash_profile
 go version
 ```
+so the output will be
+```
+go version go1.20.4 linux/amd64
+```
 
 ### Download Binary
 ```
@@ -52,8 +56,8 @@ cd $HOME
 rm -rf empowerchain/
 git clone https://github.com/EmpowerPlastic/empowerchain
 cd empowerchain/chain
-git checkout v1.0.0-rc1
-make build
+git checkout v1.0.0-rc2
+make install
 ```
 
 then
@@ -111,6 +115,9 @@ LimitNOFILE=10000
 [Install]
 WantedBy=multi-user.target
 EOF
+```
+### Enable Services
+```
 sudo systemctl daemon-reload
 sudo systemctl enable empowerd
 ```
@@ -123,5 +130,23 @@ sudo systemctl start empowerd
 ```
 sudo journalctl -fu empowerd -o cat
 ```
-
+### Create Validator
+```
+empowerd tx staking create-validator \
+--amount=10000000umpwr \
+--pubkey=$(empowerd tendermint show-validator) \
+--moniker="MONIKER" \
+--website="CHANGE_TO_YOUR_WEBSITE" \
+--identity="KEYBASE" \
+--details="YOUR_DETAILS"\
+--chain-id=circulus-1 \
+--commission-rate=0.1 \
+--commission-max-rate=0.2 \
+--commission-max-change-rate=0.05 \
+--min-self-delegation=1 \
+--fees=10000umpwr \
+--from=wallet \
+-y
+```
+you can edit or remove 'moniker' 'website' 'identity' 'details' as you want
 
