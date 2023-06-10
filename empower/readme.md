@@ -58,7 +58,7 @@ empowerd tx distribution withdraw-rewards $(empowerd keys show wallet --bech val
 
 ## empowerx tx auth exect
 
-Untuk task ini bikin wallet kedua di command line atau bisa import dari keplr
+For this task you must create second wallet on command line or you can import it via keplr
 
 ### first command
 
