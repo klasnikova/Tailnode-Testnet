@@ -5,25 +5,27 @@
 </p>
 
 
-### [Docs](https://docs.empowerchain.io/validators/validator-setup)
+# [Docs](https://docs.empowerchain.io/validators/validator-setup)
 
 # Network Type:Testnet
 # Chain-id: circulus-1
 
 ## Hardware Requirements
-# Minimum:
+```
+Minimum:
 - 4 or more physical CPU cores
 - At least 500GB of SSD disk storage
 - At least 16GB of memory (RAM)
 - At least 120mbps network bandwidth
-# Recommended:
+Recommended:
 - 16+ vCPUs or Intel or AMD 16 core CPU
 - At least 64GB RAM
 - 4TB+ nVME drives
+```
 
-## Manual Installation
+# Manual Installation
 
-# Installing Package Requirements
+### Installing Package Requirements
 ```
 sudo apt update
 sudo apt upgrade -y curl git jq lz4 build-essential unzip
