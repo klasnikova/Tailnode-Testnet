@@ -148,5 +148,5 @@ empowerd tx staking create-validator \
 --from=wallet \
 -y
 ```
-you can edit or remove 'moniker' 'website' 'identity' 'details' as you want
+you can edit or remove `moniker` `website` `identity` `details` as you want
 
