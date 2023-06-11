@@ -21,7 +21,7 @@ empowerd keys delete wallet
 ```
 ### Show Balance
 ```
-emppowerd query bank balance (address)
+empowerd query bank balances (address)
 ```
 ### Transfer Funds
 ```
