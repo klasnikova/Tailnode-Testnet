@@ -56,7 +56,7 @@ empowerd tx distribution withdraw-rewards VALIDATOR_ADDRESS --commission --from 
 
 ## empowerx tx auth exect
 
-For this task you must create second YOUR_WALLET on command line or you can import it via keplr
+For this task you must create second wallet on command line or you can import it via keplr
 
 ### first command
 
